@@ -56,7 +56,7 @@
     <ROW Directory="__1_Dir" Directory_Parent="save_wind_Dir" DefaultDir="2024-0~1|2024-02-14"/>
     <ROW Directory="__2_Dir" Directory_Parent="ProgramMenuFolder" DefaultDir="自动风电上报~1|自动风电上报--河南平顶山--现场"/>
     <ROW Directory="__3_Dir" Directory_Parent="StartupFolder" DefaultDir="自动风电上报~1|自动风电上报--河南平顶山--现场"/>
-    <ROW Directory="__Dir" Directory_Parent="APPDIR" DefaultDir="自动风电上报~1|自动风电上报--河南平顶山--现场"/>
+    <ROW Directory="__Dir" Directory_Parent="APPDIR" DefaultDir="PINGDI~1|pingdingshan"/>
     <ROW Directory="__pycache___10_Dir" Directory_Parent="XpathConfig_Dir" DefaultDir="__PYCA~1|__pycache__"/>
     <ROW Directory="__pycache___1_Dir" Directory_Parent="MysqlInfo_Dir" DefaultDir="__PYCA~1|__pycache__"/>
     <ROW Directory="__pycache___2_Dir" Directory_Parent="DataBaseInfo_Dir" DefaultDir="__PYCA~1|__pycache__"/>
