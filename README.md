@@ -1,2 +1,2 @@
-# AutoWindPower
-自动风电
+# AutoWindPowerReport
+自动风电上报
