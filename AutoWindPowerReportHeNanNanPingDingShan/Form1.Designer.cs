@@ -42,13 +42,15 @@
             toolStripMenuItem3 = new ToolStripMenuItem();
             label1 = new Label();
             label5 = new Label();
+            label2 = new Label();
+            TiaoShi = new Button();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // RunWind
             // 
             RunWind.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            RunWind.Location = new Point(220, 80);
+            RunWind.Location = new Point(109, 80);
             RunWind.Name = "RunWind";
             RunWind.Size = new Size(345, 128);
             RunWind.TabIndex = 0;
@@ -81,7 +83,7 @@
             // 
             StopWind.Enabled = false;
             StopWind.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            StopWind.Location = new Point(220, 259);
+            StopWind.Location = new Point(109, 250);
             StopWind.Name = "StopWind";
             StopWind.Size = new Size(345, 128);
             StopWind.TabIndex = 1;
@@ -93,7 +95,7 @@
             // 
             DescriedSoft.AutoSize = true;
             DescriedSoft.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            DescriedSoft.Location = new Point(220, 407);
+            DescriedSoft.Location = new Point(197, 407);
             DescriedSoft.Name = "DescriedSoft";
             DescriedSoft.Size = new Size(181, 22);
             DescriedSoft.TabIndex = 4;
@@ -138,7 +140,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(585, 186);
+            label1.Location = new Point(542, 133);
             label1.Name = "label1";
             label1.Size = new Size(90, 22);
             label1.TabIndex = 5;
@@ -148,17 +150,40 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label5.Location = new Point(585, 133);
+            label5.Location = new Point(542, 80);
             label5.Name = "label5";
             label5.Size = new Size(95, 22);
             label5.TabIndex = 8;
             label5.Text = "上报场站为:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label2.Location = new Point(542, 250);
+            label2.Name = "label2";
+            label2.Size = new Size(74, 22);
+            label2.TabIndex = 10;
+            label2.Text = "调试按钮";
+            // 
+            // TiaoShi
+            // 
+            TiaoShi.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            TiaoShi.Location = new Point(542, 320);
+            TiaoShi.Name = "TiaoShi";
+            TiaoShi.Size = new Size(135, 58);
+            TiaoShi.TabIndex = 11;
+            TiaoShi.Text = "关闭";
+            TiaoShi.UseVisualStyleBackColor = true;
+            TiaoShi.Click += TiaoShi_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(TiaoShi);
+            Controls.Add(label2);
             Controls.Add(label5);
             Controls.Add(label1);
             Controls.Add(DescriedSoft);
@@ -188,5 +213,7 @@
         private ToolStripMenuItem toolStripMenuItem3;
         private Label label1;
         private Label label5;
+        private Label label2;
+        private Button TiaoShi;
     }
 }

@@ -14,6 +14,8 @@ namespace AutoWindPowerReport
         private string scriptPath;
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
+        private bool cmdOpenClose = false;
+
 
 
         public Form1()
@@ -46,6 +48,7 @@ namespace AutoWindPowerReport
             timer1MinuteCheck.Tick += timer1_Tick;
             timer1MinuteCheck.Start();
             InitializeComponent();
+
             this.FormClosing += MainForm_FormClosing;
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -97,7 +100,8 @@ namespace AutoWindPowerReport
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.FileName = pythonRelativePath;
                     startInfo.Arguments = scriptRelativePath;
-                    startInfo.CreateNoWindow = true;
+                    startInfo.CreateNoWindow = cmdOpenClose;
+
                     pythonProcess = Process.Start(startInfo);
 
                     // 记录进程ID
@@ -204,6 +208,28 @@ namespace AutoWindPowerReport
 
         private void NowTime_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void TiaoShi_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确定要切换状态吗？", "确认操作", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // 切换状态
+                cmdOpenClose = !cmdOpenClose;
+
+                // 根据状态更改按钮文本
+                if (cmdOpenClose)
+                {
+                    ((Button)sender).Text = "开启";
+                }
+                else
+                {
+                    ((Button)sender).Text = "关闭";
+                }
+            }
 
         }
     }

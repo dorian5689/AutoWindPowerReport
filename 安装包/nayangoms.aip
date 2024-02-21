@@ -15,7 +15,7 @@
     <ROW Property="Manufacturer" Value="NaiRods"/>
     <ROW Property="ProductCode" Value="2052:{FFC61785-BA8F-4E59-B5B1-3D8F6924036B} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="nayangoms"/>
+    <ROW Property="ProductName" Value="nanyangoms"/>
     <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
     <ROW Property="UpgradeCode" Value="{F9B09B62-31C3-461E-9892-864BA5ED6E81}"/>

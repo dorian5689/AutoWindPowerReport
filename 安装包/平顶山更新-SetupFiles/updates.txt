@@ -1,0 +1,18 @@
+;aiu;
+
+[Update]
+Name = pingdingshanoms
+ProductVersion = 1.0.2
+URL = https://www.56895689.com/soft/pingdingshan/自动风电上报--河南平顶山--现场--安装包.exe
+Size = 13260927
+SHA256 = 7EA8EF9261341F801E33B81FF774DB033DEA8A8C4E668A319E67B4C9390469A9
+MD5 = 9b9b25272c9ecdeb7832cf871e4433f5
+ServerFileName = 自动风电上报--河南平顶山--现场--安装包.exe
+RegistryKey = HKUD\Software\NaiRods\pingdingshanoms\Version
+Version = 1.0.2
+UpdatedApplications = pingdingshanoms[1.0-1.0.2)
+TargetOsMinVersion = 1.0.0
+TargetOsMaxVersion = 1.0.1
+Description = V1.0.2版本
+Feature = 测试在线更新功能
+Enhancement = 添加调试功能

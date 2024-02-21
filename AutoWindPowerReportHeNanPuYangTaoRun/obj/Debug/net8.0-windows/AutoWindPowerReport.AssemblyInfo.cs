@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AutoWindPowerReport")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f911cb23b69839ffb862def6a2ed8608fb18e45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f5f8245e1037695373b353b1b87b24a2289da5e")]
 [assembly: System.Reflection.AssemblyProductAttribute("AutoWindPowerReport")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AutoWindPowerReport")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

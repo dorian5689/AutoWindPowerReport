@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|d:\\install_soft\\code\\autowindpowerreport\\autowindpowerreporthenanpuyangtaorun\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|d:\\install_soft\\code\\autowindpowerreport\\autowindpowerreporthenanpuyangtaorun\\autowindpowerreport.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|solutionrelative:autowindpowerreport.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
@@ -39,6 +43,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Form2.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\Form2.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "Form2.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-20T08:41:54.122Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AutoWindPowerReport",
               "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\AutoWindPowerReport.csproj",
               "RelativeDocumentMoniker": "AutoWindPowerReport.csproj",
@@ -50,7 +66,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Form1.Designer.cs",
               "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\Form1.Designer.cs",
               "RelativeDocumentMoniker": "Form1.Designer.cs",
@@ -62,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -74,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "AutoWindPowerReport.csproj",
               "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\AutoWindPowerReport.csproj",
               "RelativeDocumentMoniker": "AutoWindPowerReport.csproj",
@@ -86,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "app.manifest",
               "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\app.manifest",
               "RelativeDocumentMoniker": "app.manifest",
@@ -98,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanPuYangTaoRun\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
