@@ -57,9 +57,13 @@ class FindExeTools(object):
         # pag.press("enter")
         # time.sleep(2)
         import subprocess
+
         process_name =F'C:{os.sep}Program Files{os.sep}iscpclient{os.sep}bin{os.sep}iscpclient.exe'
+
         if not  os.path.isfile(process_name):
-            process_name = F'..{os.sep}ExeSoft{os.sep}iscpclient{os.sep}bin{os.sep}iscpclient.exe'
+            process_name = F'D:{os.sep}oms{os.sep}iscpclient{os.sep}bin{os.sep}iscpclient.exe'
+            if not os.path.isfile(process_name):
+                process_name = F'..{os.sep}ExeSoft{os.sep}iscpclient{os.sep}bin{os.sep}iscpclient.exe'
         subprocess.Popen(process_name)
         time.sleep(2)
         res = gw.getWindowsWithTitle('安全接入网关SDK')[0]
