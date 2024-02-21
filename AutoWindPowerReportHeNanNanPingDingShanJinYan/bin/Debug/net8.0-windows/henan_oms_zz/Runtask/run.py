@@ -222,7 +222,7 @@ class RunSxz(object):
             "markdown": {
                 "title": "OMS推送",
                 "text":
-                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--电量--河南新乡--现场'
+                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--电量--河南省平顶山市'
             }
         }
         self.message_cn = {
@@ -230,7 +230,7 @@ class RunSxz(object):
             "markdown": {
                 "title": "OMS推送",
                 "text":
-                    F'第:{self.wfname_id}个场站:{self.wfname}--已上报--储能--河南新乡--现场'
+                    F'第:{self.wfname_id}个场站:{self.wfname}--已上报--储能--河南省平顶山市'
             }
         }
 
@@ -518,7 +518,7 @@ class RunSxz(object):
             "markdown": {
                 "title": "OMS推送",
                 "text":
-                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--电量--河南新乡--现场<br>'
+                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--电量--河南省平顶山市<br>'
                     F'发电量:{fdl}<br>上网电量:{swdl}<br>弃电量:{qdl}<br>',
             }
         }
@@ -683,7 +683,7 @@ class RunSxz(object):
             "markdown": {
                 "title": "OMS推送",
                 "text":
-                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--储能--河南新乡--现场<br>'
+                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--储能--河南省平顶山市<br>'
                     F'储能日最大充电电力:{cnrzdcddl}<br>储能日最大放电电力:{cnrzdfddl}<br>'
                     F'储能日充电量:{cnrcdl}<br>储能日放电量:{cnrfdl}<br>'
                     F'储能日充电次数:{cnrcdcs}<br>储能日放电次数:{cnrfdcs}<br>'
@@ -745,7 +745,7 @@ class RunSxz(object):
             "markdown": {
                 "title": "OMS推送",
                 "text":
-                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--储能--河南新乡--现场<br>'
+                    F'第{self.wfname_id}个场站:{self.wfname}--已上报--储能--河南省平顶山市<br>'
                     F'储能日最大充电电力:{cnrzdcddl}<br>储能日最大放电电力:{cnrzdfddl}<br>'
                     F'储能日充电量:{cnrcdl}<br>储能日放电量:{cnrfdl}<br>'
                     F'储能日充电次数:{cnrcdcs}<br>储能日放电次数:{cnrfdcs}<br>'
