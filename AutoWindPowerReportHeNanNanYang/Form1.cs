@@ -14,13 +14,14 @@ namespace AutoWindPowerReport
         private string scriptPath;
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
+        private bool cmdOpenClose = true;
 
 
         public Form1()
         {
             // 创建并尝试获取互斥体
             bool createdNewsxz;
-            mutex = new Mutex(true, "{自动风电上报--河南南阳现场}", out createdNewsxz);
+            mutex = new Mutex(true, "{自动风电上报--河南省南阳市现场}", out createdNewsxz);
             if (!createdNewsxz)
             {
                 // 互斥体已经存在，说明已经有实例在运行
@@ -97,7 +98,7 @@ namespace AutoWindPowerReport
                     ProcessStartInfo startInfo = new ProcessStartInfo();
                     startInfo.FileName = pythonRelativePath;
                     startInfo.Arguments = scriptRelativePath;
-                    startInfo.CreateNoWindow = true;
+                    startInfo.CreateNoWindow = cmdOpenClose;
                     pythonProcess = Process.Start(startInfo);
 
                     // 记录进程ID
@@ -205,6 +206,32 @@ namespace AutoWindPowerReport
         private void NowTime_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确定要切换状态吗？", "确认操作", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                // 切换状态
+                cmdOpenClose = !cmdOpenClose;
+
+                // 根据状态更改按钮文本
+                if (cmdOpenClose)
+                {
+                    ((Button)sender).Text = "关闭";
+                }
+                else
+                {
+                    ((Button)sender).Text = "开启";
+                }
+            }
         }
     }
 

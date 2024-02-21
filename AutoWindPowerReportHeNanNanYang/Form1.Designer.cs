@@ -44,6 +44,8 @@
             label2 = new Label();
             label4 = new Label();
             label5 = new Label();
+            button1 = new Button();
+            label6 = new Label();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -164,23 +166,46 @@
             label4.Name = "label4";
             label4.Size = new Size(42, 22);
             label4.TabIndex = 7;
-            label4.Text = "雅润";
+            label4.Text = "嘉润";
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label5.Location = new Point(585, 133);
+            label5.Location = new Point(585, 123);
             label5.Name = "label5";
             label5.Size = new Size(95, 22);
             label5.TabIndex = 8;
             label5.Text = "上报场站为:";
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            button1.Location = new Point(625, 310);
+            button1.Name = "button1";
+            button1.Size = new Size(123, 55);
+            button1.TabIndex = 9;
+            button1.Text = "关闭";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
+            label6.Location = new Point(642, 259);
+            label6.Name = "label6";
+            label6.Size = new Size(74, 22);
+            label6.TabIndex = 10;
+            label6.Text = "调试按钮";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label6);
+            Controls.Add(button1);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label2);
@@ -214,5 +239,7 @@
         private Label label2;
         private Label label4;
         private Label label5;
+        private Button button1;
+        private Label label6;
     }
 }
