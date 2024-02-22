@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|d:\\install_soft\\code\\autowindpowerreport\\autowindpowerreporthenannan\u6F2F\u6CB3\u98DE\u7FD4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\autowindpowerreport.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{CF9CC8CF-9771-4D7F-B922-D44C4CAD9E48}|AutoWindPowerReport.csproj|solutionrelative:autowindpowerreport.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AutoWindPowerReport",
+              "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\AutoWindPowerReport.csproj",
+              "RelativeDocumentMoniker": "AutoWindPowerReport.csproj",
+              "ToolTip": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\AutoWindPowerReport.csproj",
+              "RelativeToolTip": "AutoWindPowerReport.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-02-21T15:45:22.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\Form1.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "Form1.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-21T14:08:42.608Z",
+              "EditorCaption": " [\u8BBE\u8BA1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "D:\\install_soft\\code\\AutoWindPowerReport\\AutoWindPowerReportHeNanNan\u6F2F\u6CB3\u98DE\u7FD4\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwBYAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-18T10:44:06.144Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
