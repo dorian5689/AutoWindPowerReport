@@ -65,7 +65,7 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 00 && now.Minute == 20 && now.Second == 00)
+            if (now.Hour == 00 && now.Minute == 38 && now.Second == 15)
             {
                 this.label3.Text = DateTime.Now.ToString("HH:mm:ss");
 
@@ -74,6 +74,8 @@ namespace AutoWindPowerReport
                 MessageBox.Show("程序开始运行了！");
                 // 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
                 // timer1MinuteCheck.Stop();
+                RunWind.Enabled = false;
+                StopWind.Enabled = true;
             }
             else
             {
@@ -232,6 +234,53 @@ namespace AutoWindPowerReport
                     ((Button)sender).Text = "开启";
                 }
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            HeNanSxz f2 = new HeNanSxz();
+            this.Hide();
+            f2.ShowDialog();
+            //this.Dispose();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            HeNanSdtz f2 = new HeNanSdtz();
+            this.Hide();
+            f2.ShowDialog();
+            //this.Dispose();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            HeNanSjts f2 = new HeNanSjts();
+            this.Hide();
+            f2.ShowDialog();
+            //this.Dispose();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            HenanQxjc f2 = new HenanQxjc();
+            this.Hide();
+            f2.ShowDialog();
+            //this.Dispose();
+        }
+
+        private void NowTimeText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
