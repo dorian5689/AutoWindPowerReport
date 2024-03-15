@@ -15,6 +15,10 @@ namespace AutoWindPowerReport
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
         private bool cmdOpenClose = true;
+        private bool isButtonEnabledSxz = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
+        private bool isButtonEnabledSdtz = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
+        private bool isButtonEnabledSjts = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
+        private bool isButtonEnabledQxjc = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
 
 
         public Form1()
@@ -280,6 +284,80 @@ namespace AutoWindPowerReport
 
         private void NowTimeText_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void HeNanSxzButtonClose_Click(object sender, EventArgs e)
+        {
+            if (isButtonEnabledSxz)
+            {
+                HeNanSxzButton.Enabled = false; // 当前状态为开启，点击后变为关闭
+                HeNanSxzButtonClose.Text = "关闭状态";
+                isButtonEnabledSxz = false; // 更新布尔变量状态为false
+            }
+            else
+            {
+                HeNanSxzButton.Enabled = true; // 当前状态为关闭，点击后变为开启
+                HeNanSxzButtonClose.Text = "开启状态";
+                isButtonEnabledSxz = true; // 更新布尔变量状态为true
+            }
+
+
+
+        }
+
+        private void HeNanSdtzButtonClose_Click(object sender, EventArgs e)
+        {
+
+            if (isButtonEnabledSdtz)
+            {
+                HeNanSdtzButton.Enabled = false; // 当前状态为开启，点击后变为关闭
+                HeNanSdtzButtonClose.Text = "关闭状态";
+                isButtonEnabledSdtz = false; // 更新布尔变量状态为false
+            }
+            else
+            {
+                HeNanSdtzButton.Enabled = true; // 当前状态为关闭，点击后变为开启
+                HeNanSdtzButtonClose.Text = "开启状态";
+                isButtonEnabledSdtz = true; // 更新布尔变量状态为true
+            }
+
+
+
+        }
+
+        private void HeNanQxjcButtonClose_Click(object sender, EventArgs e)
+        {
+            if (isButtonEnabledQxjc)
+            {
+                HeNanQxjcButton1.Enabled = false; // 当前状态为开启，点击后变为关闭
+                HeNanQxjcButtonClose.Text = "关闭状态";
+                isButtonEnabledQxjc = false; // 更新布尔变量状态为false
+            }
+            else
+            {
+                HeNanQxjcButton1.Enabled = true; // 当前状态为关闭，点击后变为开启
+                HeNanQxjcButtonClose.Text = "开启状态";
+                isButtonEnabledQxjc = true; // 更新布尔变量状态为true
+            }
+
+
+        }
+
+        private void HeNanSjtsButtonClose_Click(object sender, EventArgs e)
+        {
+            if (isButtonEnabledSjts)
+            {
+                HeNanSjtsButton.Enabled = false; // 当前状态为开启，点击后变为关闭
+                HeNanSjtsButtonClose.Text = "关闭状态";
+                isButtonEnabledSjts = false; // 更新布尔变量状态为false
+            }
+            else
+            {
+                HeNanSjtsButton.Enabled = true; // 当前状态为关闭，点击后变为开启
+                HeNanSjtsButtonClose.Text = "开启状态";
+                isButtonEnabledSjts = true; // 更新布尔变量状态为true
+            }
 
         }
     }

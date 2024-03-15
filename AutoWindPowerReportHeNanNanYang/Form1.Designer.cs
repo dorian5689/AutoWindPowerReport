@@ -45,16 +45,20 @@
             button1 = new Button();
             label6 = new Label();
             HeNanSxzButton = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            HeNanSdtzButton = new Button();
+            HeNanQxjcButton1 = new Button();
+            HeNanSjtsButton = new Button();
+            HeNanSxzButtonClose = new Button();
+            HeNanSdtzButtonClose = new Button();
+            HeNanQxjcButtonClose = new Button();
+            HeNanSjtsButtonClose = new Button();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // RunWind
             // 
             RunWind.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            RunWind.Location = new Point(124, 91);
+            RunWind.Location = new Point(124, 69);
             RunWind.Name = "RunWind";
             RunWind.Size = new Size(345, 128);
             RunWind.TabIndex = 0;
@@ -66,7 +70,7 @@
             // 
             NowTimeText.AutoSize = true;
             NowTimeText.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            NowTimeText.Location = new Point(220, 32);
+            NowTimeText.Location = new Point(220, 9);
             NowTimeText.Name = "NowTimeText";
             NowTimeText.Size = new Size(79, 22);
             NowTimeText.TabIndex = 2;
@@ -77,7 +81,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label3.Location = new Point(305, 32);
+            label3.Location = new Point(315, 9);
             label3.Name = "label3";
             label3.Size = new Size(48, 22);
             label3.TabIndex = 3;
@@ -88,7 +92,7 @@
             // 
             StopWind.Enabled = false;
             StopWind.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            StopWind.Location = new Point(124, 237);
+            StopWind.Location = new Point(124, 221);
             StopWind.Name = "StopWind";
             StopWind.Size = new Size(345, 128);
             StopWind.TabIndex = 1;
@@ -100,11 +104,11 @@
             // 
             DescriedSoft.AutoSize = true;
             DescriedSoft.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            DescriedSoft.Location = new Point(182, 407);
+            DescriedSoft.Location = new Point(182, 419);
             DescriedSoft.Name = "DescriedSoft";
-            DescriedSoft.Size = new Size(181, 22);
+            DescriedSoft.Size = new Size(220, 22);
             DescriedSoft.TabIndex = 4;
-            DescriedSoft.Text = "默认运行时间:00:20:00";
+            DescriedSoft.Text = "OMS默认运行时间:00:20:00";
             // 
             // notifyIcon1
             // 
@@ -145,7 +149,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(239, 66);
+            label1.Location = new Point(247, 44);
             label1.Name = "label1";
             label1.Size = new Size(81, 22);
             label1.TabIndex = 5;
@@ -156,7 +160,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label5.Location = new Point(581, 32);
+            label5.Location = new Point(547, 9);
             label5.Name = "label5";
             label5.Size = new Size(122, 22);
             label5.TabIndex = 8;
@@ -166,7 +170,7 @@
             // button1
             // 
             button1.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            button1.Location = new Point(581, 374);
+            button1.Location = new Point(534, 393);
             button1.Name = "button1";
             button1.Size = new Size(135, 55);
             button1.TabIndex = 9;
@@ -178,60 +182,108 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label6.Location = new Point(609, 343);
+            label6.Location = new Point(534, 368);
             label6.Name = "label6";
-            label6.Size = new Size(74, 22);
+            label6.Size = new Size(113, 22);
             label6.TabIndex = 10;
-            label6.Text = "调试按钮";
+            label6.Text = "OMS调试按钮";
             // 
             // HeNanSxzButton
             // 
-            HeNanSxzButton.Location = new Point(581, 91);
+            HeNanSxzButton.Enabled = false;
+            HeNanSxzButton.Location = new Point(534, 69);
             HeNanSxzButton.Name = "HeNanSxzButton";
-            HeNanSxzButton.Size = new Size(135, 63);
+            HeNanSxzButton.Size = new Size(135, 47);
             HeNanSxzButton.TabIndex = 11;
             HeNanSxzButton.Text = "双细则";
             HeNanSxzButton.UseVisualStyleBackColor = true;
             HeNanSxzButton.Click += button2_Click;
             // 
-            // button3
+            // HeNanSdtzButton
             // 
-            button3.Location = new Point(581, 181);
-            button3.Name = "button3";
-            button3.Size = new Size(135, 63);
-            button3.TabIndex = 12;
-            button3.Text = "省调通知";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            HeNanSdtzButton.Enabled = false;
+            HeNanSdtzButton.Location = new Point(534, 134);
+            HeNanSdtzButton.Name = "HeNanSdtzButton";
+            HeNanSdtzButton.Size = new Size(135, 52);
+            HeNanSdtzButton.TabIndex = 12;
+            HeNanSdtzButton.Text = "省调通知";
+            HeNanSdtzButton.UseVisualStyleBackColor = true;
+            HeNanSdtzButton.Click += button3_Click;
             // 
-            // button4
+            // HeNanQxjcButton1
             // 
-            button4.Location = new Point(581, 267);
-            button4.Name = "button4";
-            button4.Size = new Size(135, 63);
-            button4.TabIndex = 13;
-            button4.Text = "缺陷检测";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            HeNanQxjcButton1.Enabled = false;
+            HeNanQxjcButton1.Location = new Point(534, 221);
+            HeNanQxjcButton1.Name = "HeNanQxjcButton1";
+            HeNanQxjcButton1.Size = new Size(135, 52);
+            HeNanQxjcButton1.TabIndex = 13;
+            HeNanQxjcButton1.Text = "缺陷检测";
+            HeNanQxjcButton1.UseVisualStyleBackColor = true;
+            HeNanQxjcButton1.Click += button4_Click;
             // 
-            // button5
+            // HeNanSjtsButton
             // 
-            button5.Location = new Point(37, 91);
-            button5.Name = "button5";
-            button5.Size = new Size(81, 280);
-            button5.TabIndex = 14;
-            button5.Text = "数据推送";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            HeNanSjtsButton.Enabled = false;
+            HeNanSjtsButton.Location = new Point(534, 298);
+            HeNanSjtsButton.Name = "HeNanSjtsButton";
+            HeNanSjtsButton.Size = new Size(131, 51);
+            HeNanSjtsButton.TabIndex = 14;
+            HeNanSjtsButton.Text = "数据推送";
+            HeNanSjtsButton.UseVisualStyleBackColor = true;
+            HeNanSjtsButton.Click += button5_Click;
+            // 
+            // HeNanSxzButtonClose
+            // 
+            HeNanSxzButtonClose.Location = new Point(713, 69);
+            HeNanSxzButtonClose.Name = "HeNanSxzButtonClose";
+            HeNanSxzButtonClose.Size = new Size(75, 47);
+            HeNanSxzButtonClose.TabIndex = 15;
+            HeNanSxzButtonClose.Text = "关闭状态";
+            HeNanSxzButtonClose.UseVisualStyleBackColor = true;
+            HeNanSxzButtonClose.Click += HeNanSxzButtonClose_Click;
+            // 
+            // HeNanSdtzButtonClose
+            // 
+            HeNanSdtzButtonClose.Location = new Point(713, 139);
+            HeNanSdtzButtonClose.Name = "HeNanSdtzButtonClose";
+            HeNanSdtzButtonClose.Size = new Size(75, 47);
+            HeNanSdtzButtonClose.TabIndex = 16;
+            HeNanSdtzButtonClose.Text = "关闭状态";
+            HeNanSdtzButtonClose.UseVisualStyleBackColor = true;
+            HeNanSdtzButtonClose.Click += HeNanSdtzButtonClose_Click;
+            // 
+            // HeNanQxjcButtonClose
+            // 
+            HeNanQxjcButtonClose.Location = new Point(713, 226);
+            HeNanQxjcButtonClose.Name = "HeNanQxjcButtonClose";
+            HeNanQxjcButtonClose.Size = new Size(75, 47);
+            HeNanQxjcButtonClose.TabIndex = 17;
+            HeNanQxjcButtonClose.Text = "关闭状态";
+            HeNanQxjcButtonClose.UseVisualStyleBackColor = true;
+            HeNanQxjcButtonClose.Click += HeNanQxjcButtonClose_Click;
+            // 
+            // HeNanSjtsButtonClose
+            // 
+            HeNanSjtsButtonClose.Location = new Point(713, 298);
+            HeNanSjtsButtonClose.Name = "HeNanSjtsButtonClose";
+            HeNanSjtsButtonClose.Size = new Size(75, 47);
+            HeNanSjtsButtonClose.TabIndex = 18;
+            HeNanSjtsButtonClose.Text = "关闭状态";
+            HeNanSjtsButtonClose.UseVisualStyleBackColor = true;
+            HeNanSjtsButtonClose.Click += HeNanSjtsButtonClose_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
+            Controls.Add(HeNanSjtsButtonClose);
+            Controls.Add(HeNanQxjcButtonClose);
+            Controls.Add(HeNanSdtzButtonClose);
+            Controls.Add(HeNanSxzButtonClose);
+            Controls.Add(HeNanSjtsButton);
+            Controls.Add(HeNanQxjcButton1);
+            Controls.Add(HeNanSdtzButton);
             Controls.Add(HeNanSxzButton);
             Controls.Add(label6);
             Controls.Add(button1);
@@ -267,8 +319,12 @@
         private Button button1;
         private Label label6;
         private Button HeNanSxzButton;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button HeNanSdtzButton;
+        private Button HeNanQxjcButton1;
+        private Button HeNanSjtsButton;
+        private Button HeNanSxzButtonClose;
+        private Button HeNanSdtzButtonClose;
+        private Button HeNanQxjcButtonClose;
+        private Button HeNanSjtsButtonClose;
     }
 }
