@@ -14,8 +14,8 @@ namespace AutoWindPowerReport
     public partial class HeNanSjts : Form
     {
   
-        private string pythonRelativePathSdtz = @"auto\Python3911\python.exe";
-        private string scriptRelativePathSdtz = @"auto\RunTask\run_henan_sjts.py";
+        private string pythonRelativePathSjts = @"auto\Python3911\python.exe";
+        private string scriptRelativePathSjts = @"auto\RunTask\run_henan_sjts.py";
   
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
@@ -25,7 +25,7 @@ namespace AutoWindPowerReport
 
             InitializeComponent();
         }
-        private void RunCommandAsAdministratorSjts(string pythonRelativePathSdtz, string scriptRelativePathSdtz, bool cmdOpenClose)
+        private void RunCommandAsAdministratorSjts(string pythonRelativePathSjts, string scriptRelativePathSjts, bool cmdOpenClose)
         {
             try
             {
@@ -36,8 +36,8 @@ namespace AutoWindPowerReport
                     // 启动Python进程
                     // 启动Python进程
                     ProcessStartInfo startInfo = new ProcessStartInfo();
-                    startInfo.FileName = pythonRelativePathSdtz;
-                    startInfo.Arguments = scriptRelativePathSdtz;
+                    startInfo.FileName = pythonRelativePathSjts;
+                    startInfo.Arguments = scriptRelativePathSjts;
                     startInfo.CreateNoWindow = cmdOpenClose;
                     pythonProcess = Process.Start(startInfo);
 
@@ -70,7 +70,7 @@ namespace AutoWindPowerReport
 
         private void HeNanSjtsRun_Click(object sender, EventArgs e)
         {
-            RunCommandAsAdministratorSjts(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
+            RunCommandAsAdministratorSjts(pythonRelativePathSjts, scriptRelativePathSjts, cmdOpenClose);
 
             //MessageBox.Show("开始运行!");
             HeNanSjtsRun.Enabled = false;
@@ -139,11 +139,12 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 00 && now.Minute == 01 && now.Second == 00)
+            if 
+                ((now.Hour == 00 && now.Minute == 01 && now.Second == 00) || (now.Hour == 00 && now.Minute == 02 && now.Second == 00))
             {
                 this.SjtsNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
-                RunCommandAsAdministratorSjts(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
+                RunCommandAsAdministratorSjts(pythonRelativePathSjts, scriptRelativePathSjts, cmdOpenClose);
 
                 MessageBox.Show("程序数据推送开始运行了！");
                 //// 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
