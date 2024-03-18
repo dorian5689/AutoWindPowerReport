@@ -13,18 +13,13 @@ namespace AutoWindPowerReport
 {
     public partial class HeNanSdtz : Form
     {
-        private string pythonRelativePathSdtz = @"C:\Python3911\python.exe";
-        private string scriptRelativePathSdtz = @"henan_oms_zz\Runtask\run.py";
+        private string pythonRelativePathSdtz = @"auto\Python3911\python.exe";
+        private string scriptRelativePathSdtz = @"auto\RunTask/run_henan_sdtz";
  
         private Process pythonProcess; // 存储启动的Python进程
-        private System.Windows.Forms.Timer timer1MinuteCheck;
         private bool cmdOpenClose = true;
         public HeNanSdtz()
         {
-            timer1MinuteCheck = new System.Windows.Forms.Timer();
-            timer1MinuteCheck.Interval = 1000; // 设置间隔为1秒（为了实时检测时间）
-            timer1MinuteCheck.Tick += HeNanSdtzTimer1_Tick;
-            timer1MinuteCheck.Start();
             InitializeComponent();
         }
         private void RunCommandAsAdministratorSdtz(string pythonRelativePathSdtz, string scriptRelativePathSdtz, bool cmdOpenClose)
@@ -61,7 +56,7 @@ namespace AutoWindPowerReport
                     //process.StartInfo.Verb = "runas";
 
                     //process.Start();
-                    MessageBox.Show("程序开始运行");
+                    MessageBox.Show("程序省调通知运行");
                 }
             }
             catch (Exception ex)
@@ -139,19 +134,18 @@ namespace AutoWindPowerReport
             }
         }
 
-        private void HeNanSdtzTimer1_Tick(object sender, EventArgs e)
+        public void HeNanSdtzTimer1_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 02 && now.Minute == 00 && now.Second == 00)
+            if (now.Hour == 09&& now.Minute == 00 && now.Second == 00)
             {
                 this.SdtzNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
                 RunCommandAsAdministratorSdtz(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
 
-                MessageBox.Show("程序开始运行了！");
+                MessageBox.Show("程序省调通知开始运行了！");
                 //// 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
-                timer1MinuteCheck.Stop();
                 HeNanSdtzRun.Enabled = false;
                 HeNanSdtzStop.Enabled = true;
             }
@@ -161,7 +155,6 @@ namespace AutoWindPowerReport
 
             }
         }
-
 
     }
 }

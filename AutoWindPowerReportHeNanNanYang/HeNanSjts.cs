@@ -6,7 +6,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading.Tasks; 
 using System.Windows.Forms;
 
 namespace AutoWindPowerReport
@@ -14,21 +14,18 @@ namespace AutoWindPowerReport
     public partial class HeNanSjts : Form
     {
   
-        private string pythonRelativePathSdtz = @"C:\Python3911\python.exe";
-        private string scriptRelativePathSdtz = @"henan_oms_zz\Runtask\run.py";
+        private string pythonRelativePathSdtz = @"auto\Python3911\python.exe";
+        private string scriptRelativePathSdtz = @"auto\RunTask\run_henan_sjts.py";
   
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
         private bool cmdOpenClose = true;
         public HeNanSjts()
         {
-            timer1MinuteCheck = new System.Windows.Forms.Timer();
-            timer1MinuteCheck.Interval = 1000; // 设置间隔为1秒（为了实时检测时间）
-            timer1MinuteCheck.Tick += HeNanSjtsTimer1_Tick;
-            timer1MinuteCheck.Start();
+
             InitializeComponent();
         }
-        private void RunCommandAsAdministratorSdtz(string pythonRelativePathSdtz, string scriptRelativePathSdtz, bool cmdOpenClose)
+        private void RunCommandAsAdministratorSjts(string pythonRelativePathSdtz, string scriptRelativePathSdtz, bool cmdOpenClose)
         {
             try
             {
@@ -73,7 +70,7 @@ namespace AutoWindPowerReport
 
         private void HeNanSjtsRun_Click(object sender, EventArgs e)
         {
-            RunCommandAsAdministratorSdtz(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
+            RunCommandAsAdministratorSjts(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
 
             //MessageBox.Show("开始运行!");
             HeNanSjtsRun.Enabled = false;
@@ -138,7 +135,7 @@ namespace AutoWindPowerReport
                 }
             }
         }
-        private void HeNanSjtsTimer1_Tick(object sender, EventArgs e)
+        public void HeNanSjtsTimer1_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
 
@@ -146,11 +143,10 @@ namespace AutoWindPowerReport
             {
                 this.SjtsNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
-                RunCommandAsAdministratorSdtz(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
+                RunCommandAsAdministratorSjts(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
 
-                MessageBox.Show("程序开始运行了！");
+                MessageBox.Show("程序数据推送开始运行了！");
                 //// 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
-                timer1MinuteCheck.Stop();
                 HeNanSjtsRun.Enabled = false;
                 HeNanSjtsStop.Enabled = true;
             }

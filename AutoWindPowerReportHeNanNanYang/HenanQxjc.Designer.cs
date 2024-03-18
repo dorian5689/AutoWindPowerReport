@@ -43,7 +43,7 @@
             SjtsMoRenButton.Name = "SjtsMoRenButton";
             SjtsMoRenButton.Size = new Size(361, 47);
             SjtsMoRenButton.TabIndex = 27;
-            SjtsMoRenButton.Text = "默认运行时间09:30:00";
+            SjtsMoRenButton.Text = "默认运行时间15:00:00";
             SjtsMoRenButton.UseVisualStyleBackColor = true;
             // 
             // SjtsKfzms

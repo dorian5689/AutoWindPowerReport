@@ -13,8 +13,8 @@ namespace AutoWindPowerReport
 {
     public partial class HenanQxjc : Form
     {
-        private string pythonRelativePathSdtz = @"C:\Python3911\python.exe";
-        private string scriptRelativePathSdtz = @"henan_oms_zz\Runtask\run.py";
+        private string pythonRelativePathSdtz = @"auto\Python3911\python.exe";
+        private string scriptRelativePathSdtz = @"auto\Runtask\run_henan_qxjc.py";
 
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
@@ -29,7 +29,7 @@ namespace AutoWindPowerReport
             timer1MinuteCheck.Start();
             InitializeComponent();
         }
-        private void RunCommandAsAdministratorSdtz(string pythonRelativePathSdtz, string scriptRelativePathSdtz, bool cmdOpenClose)
+        private void RunCommandAsAdministratorQxjc(string pythonRelativePathSdtz, string scriptRelativePathSdtz, bool cmdOpenClose)
         {
             try
             {
@@ -63,7 +63,7 @@ namespace AutoWindPowerReport
                     //process.StartInfo.Verb = "runas";
 
                     //process.Start();
-                    MessageBox.Show("程序开始运行");
+                    MessageBox.Show("python缺陷检测程序开始运行");
                 }
             }
             catch (Exception ex)
@@ -74,7 +74,7 @@ namespace AutoWindPowerReport
 
         private void HeNanQxjcRun_Click(object sender, EventArgs e)
         {
-            RunCommandAsAdministratorSdtz(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
+            RunCommandAsAdministratorQxjc(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
 
             //MessageBox.Show("开始运行!");
             HeNanQxjcRun.Enabled = false;
@@ -139,26 +139,24 @@ namespace AutoWindPowerReport
                 }
             }
         }
-        private void HeNanQxjcTimer1_Tick(object sender, EventArgs e)
+        public void HeNanQxjcTimer1_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 09 && now.Minute == 30 && now.Second == 00)
+            if (now.Hour == 15 && now.Minute == 00 && now.Second == 00)
             {
                 this.QxjcNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
-                RunCommandAsAdministratorSdtz(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
+                RunCommandAsAdministratorQxjc(pythonRelativePathSdtz, scriptRelativePathSdtz, cmdOpenClose);
 
-                MessageBox.Show("程序开始运行了！");
+                MessageBox.Show("程序缺陷检测推送开始运行了！");
                 //// 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
-                timer1MinuteCheck.Stop();
                 HeNanQxjcRun.Enabled = false;
                 HeNanQxjcStop.Enabled = true;
             }
             else
             {
                 this.QxjcNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
-
 
             }
         }

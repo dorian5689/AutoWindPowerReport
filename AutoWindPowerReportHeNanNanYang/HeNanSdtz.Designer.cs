@@ -43,7 +43,7 @@
             SdtzMoRenButton.Name = "SdtzMoRenButton";
             SdtzMoRenButton.Size = new Size(361, 47);
             SdtzMoRenButton.TabIndex = 13;
-            SdtzMoRenButton.Text = "默认运行时间11:00:00";
+            SdtzMoRenButton.Text = "默认运行时间09:00:00";
             SdtzMoRenButton.UseVisualStyleBackColor = true;
             // 
             // SdtzKfzms

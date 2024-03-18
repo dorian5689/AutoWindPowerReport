@@ -8,12 +8,16 @@ namespace AutoWindPowerReport
 
         private Mutex mutex;
         private string currentPath; // 声明    
-        private string pythonRelativePath = @"C:\Python3911\python.exe";
-        private string scriptRelativePath = @"henan_oms_zz\Runtask\run.py";
+        private string pythonRelativePath = @"auto\Python3911\python.exe";
+        private string scriptRelativePath = @"auto\RunTask\run_henan_oms.py";
         private string pythonPath;
         private string scriptPath;
         private Process pythonProcess; // 存储启动的Python进程
         private System.Windows.Forms.Timer timer1MinuteCheck;
+        private System.Windows.Forms.Timer timer1MinuteCheck2;
+        private System.Windows.Forms.Timer timer1MinuteCheck3;
+        private System.Windows.Forms.Timer timer1MinuteCheckSjts;
+        private System.Windows.Forms.Timer timer1MinuteCheckQxjc;
         private bool cmdOpenClose = true;
         private bool isButtonEnabledSxz = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
         private bool isButtonEnabledSdtz = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
@@ -52,6 +56,55 @@ namespace AutoWindPowerReport
             timer1MinuteCheck.Start();
             InitializeComponent();
             this.FormClosing += MainForm_FormClosing;
+
+
+
+            // 双细则
+            timer1MinuteCheck2 = new System.Windows.Forms.Timer();
+            timer1MinuteCheck2.Interval = 1000;
+            // 创建HeNanSxz实例，确保构造函数没有抛出异常
+            HeNanSxz Sxz = new HeNanSxz();
+            // 绑定事件
+            timer1MinuteCheck2.Tick += Sxz.HeNanSxzTimer1_Tick;
+            // 启动定时器
+            timer1MinuteCheck2.Start();
+
+
+
+            //省调通知timer初始化
+            timer1MinuteCheck3 = new System.Windows.Forms.Timer();
+            timer1MinuteCheck3.Interval = 1000;
+            // 创建HeNanSxz实例，确保构造函数没有抛出异常
+            HeNanSdtz Sdtz = new HeNanSdtz();
+            // 绑定事件
+            timer1MinuteCheck3.Tick += Sdtz.HeNanSdtzTimer1_Tick;
+            // 启动定时器
+            timer1MinuteCheck3.Start();
+
+
+            //数据推送timer初始化
+            timer1MinuteCheckSjts = new System.Windows.Forms.Timer();
+            timer1MinuteCheckSjts.Interval = 1000;
+            // 创建HeNanSxz实例，确保构造函数没有抛出异常
+            HeNanSjts Sjts = new HeNanSjts();
+            // 绑定事件
+            timer1MinuteCheckSjts.Tick += Sjts.HeNanSjtsTimer1_Tick;
+            // 启动定时器
+            timer1MinuteCheckSjts.Start();
+
+
+
+            //缺陷检测timer初始化
+            timer1MinuteCheckQxjc = new System.Windows.Forms.Timer();
+            timer1MinuteCheckQxjc.Interval = 1000;
+            // 创建HeNanSxz实例，确保构造函数没有抛出异常
+            HenanQxjc Qxjc = new HenanQxjc();
+            // 绑定事件
+            timer1MinuteCheckQxjc.Tick += Qxjc.HeNanQxjcTimer1_Tick;
+            // 启动定时器
+            timer1MinuteCheckQxjc.Start();
+
+
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -69,13 +122,13 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 00 && now.Minute == 38 && now.Second == 15)
-            {
+            if     if ((now.Hour == 00 && now.Minute == 12 && now.Second == 00) || (now.Hour == 00 && now.Minute == 40 && now.Second == 00))
+                {
                 this.label3.Text = DateTime.Now.ToString("HH:mm:ss");
 
                 RunCommandAsAdministrator(pythonPath, scriptPath);
 
-                MessageBox.Show("程序开始运行了！");
+                MessageBox.Show("程序OMS开始运行了！");
                 // 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
                 // timer1MinuteCheck.Stop();
                 RunWind.Enabled = false;

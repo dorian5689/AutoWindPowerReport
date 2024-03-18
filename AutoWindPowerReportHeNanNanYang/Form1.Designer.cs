@@ -108,7 +108,7 @@
             DescriedSoft.Name = "DescriedSoft";
             DescriedSoft.Size = new Size(220, 22);
             DescriedSoft.TabIndex = 4;
-            DescriedSoft.Text = "OMS默认运行时间:00:20:00";
+            DescriedSoft.Text = "OMS默认运行时间:00:12:00";
             // 
             // notifyIcon1
             // 

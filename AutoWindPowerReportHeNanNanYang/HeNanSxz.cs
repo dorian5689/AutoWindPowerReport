@@ -14,18 +14,13 @@ namespace AutoWindPowerReport
     public partial class HeNanSxz : Form
     {
   
-        private string pythonRelativePathSxz = @"C:\Python3911\python.exe";
-        private string scriptRelativePathSxz = @"henan_oms_zz\Runtask\run.py";
+        private string pythonRelativePathSxz = @"auto\Python3911\python.exe";
+        private string scriptRelativePathSxz = @"auto\RunTask\run_henan_oms.py";
   
         private Process pythonProcess; // 存储启动的Python进程
-        private System.Windows.Forms.Timer timer1MinuteCheck;
         private bool cmdOpenClose = true;
         public HeNanSxz()
         {
-            timer1MinuteCheck = new System.Windows.Forms.Timer();
-            timer1MinuteCheck.Interval = 1000; // 设置间隔为1秒（为了实时检测时间）
-            timer1MinuteCheck.Tick += HeNanSxzTimer1_Tick;
-            timer1MinuteCheck.Start();
             InitializeComponent();
  
         }
@@ -146,19 +141,18 @@ namespace AutoWindPowerReport
             }
         }
 
-        private void HeNanSxzTimer1_Tick(object sender, EventArgs e)
+        public void HeNanSxzTimer1_Tick(object sender, EventArgs e)
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 01&& now.Minute == 46 && now.Second == 05)
+            if (now.Hour == 17&& now.Minute == 00 && now.Second == 00)
             {
                 this.SxzNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
                 RunCommandAsAdministratorSzx(pythonRelativePathSxz, scriptRelativePathSxz, cmdOpenClose);
 
-                MessageBox.Show("程序开始运行了！");
+                MessageBox.Show("程序双细则开始运行了！");
                 //// 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
-                timer1MinuteCheck.Stop();
                 HeNanSxzRun.Enabled = false;
                 HeNanSxzStop.Enabled = true;
             }
