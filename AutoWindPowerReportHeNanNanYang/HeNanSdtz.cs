@@ -14,7 +14,7 @@ namespace AutoWindPowerReport
     public partial class HeNanSdtz : Form
     {
         private string pythonRelativePathSdtz = @"auto\Python3911\python.exe";
-        private string scriptRelativePathSdtz = @"auto\RunTask/run_henan_sdtz";
+        private string scriptRelativePathSdtz = @"auto\RunTask\run_henan_sdtz.py";
  
         private Process pythonProcess; // 存储启动的Python进程
         private bool cmdOpenClose = true;

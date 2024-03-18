@@ -122,7 +122,7 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if     if ((now.Hour == 00 && now.Minute == 12 && now.Second == 00) || (now.Hour == 00 && now.Minute == 40 && now.Second == 00))
+            if      ((now.Hour == 00 && now.Minute == 12 && now.Second == 00) || (now.Hour == 00 && now.Minute == 40 && now.Second == 00))
                 {
                 this.label3.Text = DateTime.Now.ToString("HH:mm:ss");
 

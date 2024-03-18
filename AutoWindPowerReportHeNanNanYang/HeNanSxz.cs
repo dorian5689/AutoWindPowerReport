@@ -15,7 +15,7 @@ namespace AutoWindPowerReport
     {
   
         private string pythonRelativePathSxz = @"auto\Python3911\python.exe";
-        private string scriptRelativePathSxz = @"auto\RunTask\run_henan_oms.py";
+        private string scriptRelativePathSxz = @"auto\RunTask\run_henan_sxz.py";
   
         private Process pythonProcess; // 存储启动的Python进程
         private bool cmdOpenClose = true;
