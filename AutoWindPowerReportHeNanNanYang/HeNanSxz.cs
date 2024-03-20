@@ -151,7 +151,7 @@ namespace AutoWindPowerReport
 
                 RunCommandAsAdministratorSzx(pythonRelativePathSxz, scriptRelativePathSxz, cmdOpenClose);
 
-                MessageBox.Show("程序双细则开始运行了！");
+                //MessageBox.Show("程序双细则开始运行了！");
                 //// 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
                 HeNanSxzRun.Enabled = false;
                 HeNanSxzStop.Enabled = true;

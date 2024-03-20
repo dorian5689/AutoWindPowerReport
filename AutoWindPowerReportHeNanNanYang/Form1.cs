@@ -128,7 +128,7 @@ namespace AutoWindPowerReport
 
                 RunCommandAsAdministrator(pythonPath, scriptPath);
 
-                MessageBox.Show("程序OMS开始运行了！");
+                //MessageBox.Show("程序OMS开始运行了！");
                 // 如果只需要在1:06显示一次，可以在此处停止定时器或添加一个开关变量
                 // timer1MinuteCheck.Stop();
                 RunWind.Enabled = false;

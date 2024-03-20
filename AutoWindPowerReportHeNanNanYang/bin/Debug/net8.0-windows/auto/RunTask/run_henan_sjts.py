@@ -51,10 +51,11 @@ class HeNanReportData():
     def send_ding_henan_sjts(self, table0, message):
         time.sleep(3)
         save_wind_wfname = self.save_pic_sjts(table0)
+        logger.warning(F'数据推送地址:{save_wind_wfname}')
         from DingInfo.DingBotMix import DingApiTools
         # # 天润
         DAT = DingApiTools(appkey_value=self.appkey, appsecret_value=self.appsecret, chatid_value=self.chatid)
-        DAT.push_message(self.jf_token, self.message_cn)
+        DAT.push_message(self.jf_token, message)
         DAT.send_file(F'{save_wind_wfname}', 0)
 
         # 奈卢斯
@@ -190,8 +191,15 @@ class HeNanReportData():
             # DT = DingapiTools()
             # DT.SendMessageDing(token, markdown_true)
             # DT.SendMessageDing(token, markdown_true)
-
             page = EdgeChromeCurd().open_fanruan(henan_fanruan_oms_beifen_url)
+            message = {
+                    "msgtype": "markdown",
+                    "markdown": {
+                "title": "推送-数据入库",
+                "text": F"OMS数据已经入库,<br>入库时间为<br>{save_data}"
+                    },
+                }
+
             self.send_ding_henan_sjts(page, message)
 
         except Exception as e:
