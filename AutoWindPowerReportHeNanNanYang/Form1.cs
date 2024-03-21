@@ -1,3 +1,4 @@
+using Microsoft.VisualBasic.ApplicationServices;
 using System.Diagnostics;
 using System.Threading;
 
@@ -23,7 +24,6 @@ namespace AutoWindPowerReport
         private bool isButtonEnabledSdtz = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
         private bool isButtonEnabledSjts = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
         private bool isButtonEnabledQxjc = true; // 声明一个布尔变量记录按钮状态，默认为true（开启）
-
 
         public Form1()
         {
@@ -105,7 +105,27 @@ namespace AutoWindPowerReport
             timer1MinuteCheckQxjc.Start();
 
 
+            //HeNanUser selectionForm = new HeNanUser();
+            //selectionForm.DataSelected += SelectionForm_DataSelected;
+
+
+
+           // 创建DataSelectionForm实例并订阅事件
+           //HeNanUser selectionForm = new HeNanUser();
+           // selectionForm.UpdateLabel += SelectionForm_DataSelected;
+
+
+
+
+
+
         }
+
+
+  
+
+
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (e.CloseReason == CloseReason.UserClosing)
@@ -122,8 +142,8 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if      ((now.Hour == 00 && now.Minute == 12 && now.Second == 00) || (now.Hour == 00 && now.Minute == 40 && now.Second == 00))
-                {
+            if ((now.Hour == 00 && now.Minute == 12 && now.Second == 00) || (now.Hour == 00 && now.Minute == 40 && now.Second == 00))
+            {
                 this.label3.Text = DateTime.Now.ToString("HH:mm:ss");
 
                 RunCommandAsAdministrator(pythonPath, scriptPath);
@@ -412,6 +432,23 @@ namespace AutoWindPowerReport
                 isButtonEnabledSjts = true; // 更新布尔变量状态为true
             }
 
+        }
+
+        private void HeNanUserButton_Click(object sender, EventArgs e)
+        {
+            HeNanUser user = new HeNanUser(this);
+
+            if (user.ShowDialog() == DialogResult.OK)
+            {
+                // 如果需要的话，在对话框关闭时也可以更新一次，但此处由于是实时更新可省略
+            }
+        }
+        // 提供给Form2调用的方法，用于更新Form1中的Label
+        public void UpdateLabelInForm1(string newText)
+        {
+
+            // 直接设置label1的Text属性为替换后的内容
+            label1.Text = newText;
         }
     }
 

@@ -16,5 +16,8 @@
     <Compile Update="HeNanSxz.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="HeNanUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

@@ -52,6 +52,7 @@
             HeNanSdtzButtonClose = new Button();
             HeNanQxjcButtonClose = new Button();
             HeNanSjtsButtonClose = new Button();
+            HeNanUserButton = new Button();
             contextMenuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -149,7 +150,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label1.Location = new Point(247, 44);
+            label1.Location = new Point(282, 41);
             label1.Name = "label1";
             label1.Size = new Size(81, 22);
             label1.TabIndex = 5;
@@ -272,11 +273,22 @@
             HeNanSjtsButtonClose.UseVisualStyleBackColor = true;
             HeNanSjtsButtonClose.Click += HeNanSjtsButtonClose_Click;
             // 
+            // HeNanUserButton
+            // 
+            HeNanUserButton.Location = new Point(124, 40);
+            HeNanUserButton.Name = "HeNanUserButton";
+            HeNanUserButton.Size = new Size(151, 23);
+            HeNanUserButton.TabIndex = 19;
+            HeNanUserButton.Text = "请选择需要运行的场站";
+            HeNanUserButton.UseVisualStyleBackColor = true;
+            HeNanUserButton.Click += HeNanUserButton_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(HeNanUserButton);
             Controls.Add(HeNanSjtsButtonClose);
             Controls.Add(HeNanQxjcButtonClose);
             Controls.Add(HeNanSdtzButtonClose);
@@ -326,5 +338,6 @@
         private Button HeNanSdtzButtonClose;
         private Button HeNanQxjcButtonClose;
         private Button HeNanSjtsButtonClose;
+        private Button HeNanUserButton;
     }
 }
