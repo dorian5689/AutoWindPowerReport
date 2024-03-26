@@ -146,7 +146,7 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 18&& now.Minute == 29 && now.Second == 00)
+            if (now.Hour == 17&& now.Minute == 00 && now.Second == 00)
             {
                 this.SxzNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
