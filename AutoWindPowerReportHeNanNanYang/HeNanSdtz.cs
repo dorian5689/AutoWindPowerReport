@@ -56,7 +56,7 @@ namespace AutoWindPowerReport
                     //process.StartInfo.Verb = "runas";
 
                     //process.Start();
-                    MessageBox.Show("程序省调通知运行");
+                    //MessageBox.Show("程序省调通知运行");
                 }
             }
             catch (Exception ex)

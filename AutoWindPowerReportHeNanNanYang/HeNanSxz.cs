@@ -27,6 +27,7 @@ namespace AutoWindPowerReport
 
         private void HeNanSxz_Load(object sender, EventArgs e)
         {
+
         }
         private void RunCommandAsAdministratorSzx(string pythonRelativePathSxz, string scriptRelativePathSxz, bool cmdOpenClose)
         {
@@ -62,7 +63,7 @@ namespace AutoWindPowerReport
                     //process.StartInfo.Verb = "runas";
 
                     //process.Start();
-                    MessageBox.Show("程序开始运行");
+                    //MessageBox.Show("程序开始运行");
                 }
             }
             catch (Exception ex)
@@ -145,7 +146,7 @@ namespace AutoWindPowerReport
         {
             DateTime now = DateTime.Now;
 
-            if (now.Hour == 17&& now.Minute == 00 && now.Second == 00)
+            if (now.Hour == 18&& now.Minute == 29 && now.Second == 00)
             {
                 this.SxzNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
@@ -158,6 +159,7 @@ namespace AutoWindPowerReport
             }
             else
             {
+
                 this.SxzNowTimeText.Text = DateTime.Now.ToString("HH:mm:ss");
 
             }
